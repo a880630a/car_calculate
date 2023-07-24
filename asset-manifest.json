@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/a880630a/car_calculate.git/static/css/main.bc1cebcc.css",
+    "main.js": "/a880630a/car_calculate.git/static/js/main.6eddcd68.js",
+    "static/media/4.jpg": "/a880630a/car_calculate.git/static/media/4.057318a7732b5dd4066b.jpg",
+    "index.html": "/a880630a/car_calculate.git/index.html",
+    "main.bc1cebcc.css.map": "/a880630a/car_calculate.git/static/css/main.bc1cebcc.css.map",
+    "main.6eddcd68.js.map": "/a880630a/car_calculate.git/static/js/main.6eddcd68.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc1cebcc.css",
+    "static/js/main.6eddcd68.js"
+  ]
+}
