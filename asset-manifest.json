@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/a880630a/car_calculate.git/static/css/main.bc1cebcc.css",
-    "main.js": "/a880630a/car_calculate.git/static/js/main.6eddcd68.js",
-    "static/media/4.jpg": "/a880630a/car_calculate.git/static/media/4.057318a7732b5dd4066b.jpg",
-    "index.html": "/a880630a/car_calculate.git/index.html",
-    "main.bc1cebcc.css.map": "/a880630a/car_calculate.git/static/css/main.bc1cebcc.css.map",
-    "main.6eddcd68.js.map": "/a880630a/car_calculate.git/static/js/main.6eddcd68.js.map"
+    "main.css": "/car_calculate/static/css/main.bc1cebcc.css",
+    "main.js": "/car_calculate/static/js/main.2e0a497c.js",
+    "static/media/4.jpg": "/car_calculate/static/media/4.057318a7732b5dd4066b.jpg",
+    "index.html": "/car_calculate/index.html",
+    "main.bc1cebcc.css.map": "/car_calculate/static/css/main.bc1cebcc.css.map",
+    "main.2e0a497c.js.map": "/car_calculate/static/js/main.2e0a497c.js.map"
   },
   "entrypoints": [
     "static/css/main.bc1cebcc.css",
-    "static/js/main.6eddcd68.js"
+    "static/js/main.2e0a497c.js"
   ]
 }
