@@ -1,14 +1,18 @@
 {
   "files": {
-    "main.css": "/car_calculate/static/css/main.bc1cebcc.css",
-    "main.js": "/car_calculate/static/js/main.2e0a497c.js",
+    "main.css": "/car_calculate/static/css/main.04f436d1.css",
+    "main.js": "/car_calculate/static/js/main.dde2a709.js",
+    "static/media/bigCar.jpg": "/car_calculate/static/media/bigCar.bcc93c1cd714efe4fb95.jpg",
+    "static/media/truck.jpg": "/car_calculate/static/media/truck.a79ee7e9fed60b18d817.jpg",
+    "static/media/car.jpg": "/car_calculate/static/media/car.5ec660a02b5ccce18a17.jpg",
+    "static/media/bike.jpg": "/car_calculate/static/media/bike.160ede2c98a118b8f1cf.jpg",
     "static/media/4.jpg": "/car_calculate/static/media/4.057318a7732b5dd4066b.jpg",
     "index.html": "/car_calculate/index.html",
-    "main.bc1cebcc.css.map": "/car_calculate/static/css/main.bc1cebcc.css.map",
-    "main.2e0a497c.js.map": "/car_calculate/static/js/main.2e0a497c.js.map"
+    "main.04f436d1.css.map": "/car_calculate/static/css/main.04f436d1.css.map",
+    "main.dde2a709.js.map": "/car_calculate/static/js/main.dde2a709.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc1cebcc.css",
-    "static/js/main.2e0a497c.js"
+    "static/css/main.04f436d1.css",
+    "static/js/main.dde2a709.js"
   ]
 }
