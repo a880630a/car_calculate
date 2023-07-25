@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/car_calculate/static/css/main.1d602992.css",
+    "main.css": "/car_calculate/static/css/main.91ef9a1b.css",
     "main.js": "/car_calculate/static/js/main.cdcabc0b.js",
     "static/media/bigCar.jpg": "/car_calculate/static/media/bigCar.bcc93c1cd714efe4fb95.jpg",
     "static/media/truck.jpg": "/car_calculate/static/media/truck.a79ee7e9fed60b18d817.jpg",
@@ -10,11 +10,11 @@
     "static/media/Milonga-Regular.ttf": "/car_calculate/static/media/Milonga-Regular.663bbbf8a103714c8956.ttf",
     "static/media/Typoliner-RW-Light.ttf": "/car_calculate/static/media/Typoliner-RW-Light.af96d9f68c1d7460553a.ttf",
     "index.html": "/car_calculate/index.html",
-    "main.1d602992.css.map": "/car_calculate/static/css/main.1d602992.css.map",
+    "main.91ef9a1b.css.map": "/car_calculate/static/css/main.91ef9a1b.css.map",
     "main.cdcabc0b.js.map": "/car_calculate/static/js/main.cdcabc0b.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d602992.css",
+    "static/css/main.91ef9a1b.css",
     "static/js/main.cdcabc0b.js"
   ]
 }
