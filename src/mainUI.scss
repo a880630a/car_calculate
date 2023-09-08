@@ -1,0 +1,114 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.main-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: url(./img/cursor24x24.svg),auto;
+
+  .cursor-click-animated{
+    animation: scaleAnimation .3s ease-in-out;
+  }
+
+  .data-area {
+    // border: 2px black solid;
+    // box-shadow: 0 0 10px black;
+    
+    width: 400px;
+    // height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:rgba(255, 255, 255, 0.8);
+
+    p{
+      margin-top:20px;
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+    .date-data {
+      width: 250px;
+      margin-bottom: 10px;
+    }
+    .CC-data {
+      width: 250px;
+      margin-bottom: 10px;
+    }
+    .car-type {
+      margin-bottom: 10px;
+    }
+    .POP-data {
+      margin-bottom: 10px;
+    }
+    .oil-data {
+      margin-bottom: 10px;
+    }
+
+    .execute-btn {
+      width: 70px;  
+      height: 30px;
+      margin-bottom: 10px;   
+      color: #333333;
+      box-shadow: 0 0 8px #a3a3a3;
+      border-radius: 15px;
+      border: 0;
+      cursor:pointer;
+        &:hover {
+          // color: #cccccc;
+          border: 2px solid rgba(204, 204, 204, 0.611);
+          // box-shadow: 0 0 8px #cccccc;
+          // background-color: #cccccc;
+        }
+        &:disabled{
+          color:#a3a3a3;
+          box-shadow: 0 0 8px #a3a3a3;
+          border: 0;
+          cursor: not-allowed;
+      }
+    
+    }
+    .result {
+      // font-family: "Typoliner-RW-Light";
+      font-family: "Milonga-Regular";
+      // border: 2px solid ;
+      text-align: center;
+      font-size: 23px;
+      line-height: 50px;
+      width: 200px;
+      height: 50px;
+      font-weight: bold;
+      border-radius: 10px;
+      border: 2px solid #009966;
+      margin-bottom: 10px;
+    }
+  }
+}
+@font-face {
+  font-family: "Milonga-Regular";
+  src: url(./fonts/Milonga-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Typoliner-RW-Light";
+  src: url(./fonts/Typoliner-RW-Light.ttf) format("truetype");
+}
+
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
