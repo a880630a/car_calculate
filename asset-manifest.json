@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/car_calculate/static/css/main.91ef9a1b.css",
-    "main.js": "/car_calculate/static/js/main.cdcabc0b.js",
+    "main.css": "/car_calculate/static/css/main.1c532d76.css",
+    "main.js": "/car_calculate/static/js/main.094bd04d.js",
     "static/media/bigCar.jpg": "/car_calculate/static/media/bigCar.bcc93c1cd714efe4fb95.jpg",
     "static/media/truck.jpg": "/car_calculate/static/media/truck.a79ee7e9fed60b18d817.jpg",
     "static/media/car.jpg": "/car_calculate/static/media/car.5ec660a02b5ccce18a17.jpg",
@@ -9,12 +9,13 @@
     "static/media/4.jpg": "/car_calculate/static/media/4.057318a7732b5dd4066b.jpg",
     "static/media/Milonga-Regular.ttf": "/car_calculate/static/media/Milonga-Regular.663bbbf8a103714c8956.ttf",
     "static/media/Typoliner-RW-Light.ttf": "/car_calculate/static/media/Typoliner-RW-Light.af96d9f68c1d7460553a.ttf",
+    "static/media/cursor24x24.svg": "/car_calculate/static/media/cursor24x24.8950320d4ead05148642.svg",
     "index.html": "/car_calculate/index.html",
-    "main.91ef9a1b.css.map": "/car_calculate/static/css/main.91ef9a1b.css.map",
-    "main.cdcabc0b.js.map": "/car_calculate/static/js/main.cdcabc0b.js.map"
+    "main.1c532d76.css.map": "/car_calculate/static/css/main.1c532d76.css.map",
+    "main.094bd04d.js.map": "/car_calculate/static/js/main.094bd04d.js.map"
   },
   "entrypoints": [
-    "static/css/main.91ef9a1b.css",
-    "static/js/main.cdcabc0b.js"
+    "static/css/main.1c532d76.css",
+    "static/js/main.094bd04d.js"
   ]
 }
