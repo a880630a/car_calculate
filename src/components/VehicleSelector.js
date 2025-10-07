@@ -76,3 +76,4 @@ export default function VehicleSelector({ formData, setFormData, setStep }) {
         </div>
     );
 }
+

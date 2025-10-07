@@ -113,3 +113,4 @@ export default function HistoryPanel({ history, setHistory, onSelectHistory }) {
         </div>
     );
 }
+

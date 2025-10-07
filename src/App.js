@@ -1,19 +1,19 @@
-import './styles/modern-app.scss';
+import "./styles/modern-app.scss";
 
-import React, {
-  useEffect,
-  useState,
-} from 'react';
+import React, { useEffect, useState } from "react";
 
-import CalculationForm from './components/CalculationForm';
-import HistoryPanel from './components/HistoryPanel';
-import InfoPanel from './components/InfoPanel';
-import ResultDisplay from './components/ResultDisplay';
-import ThemeToggle from './components/ThemeToggle';
-import VehicleSelector from './components/VehicleSelector';
+import CalculationForm from "./components/CalculationForm";
+import HistoryPanel from "./components/HistoryPanel";
+import InfoPanel from "./components/InfoPanel";
+import Navigation from "./components/Navigation";
+import ResultDisplay from "./components/ResultDisplay";
+import ThemeToggle from "./components/ThemeToggle";
+import UsedCarSearch from "./components/UsedCarSearch";
+import VehicleSelector from "./components/VehicleSelector";
 
 export default function App() {
     const [theme, setTheme] = useState("light");
+    const [activeTab, setActiveTab] = useState("tax");
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({
         vehicleType: "",
@@ -64,6 +64,7 @@ export default function App() {
         if (canCalculate()) {
             calculateTax();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [formData]);
 
     const canCalculate = () => {
@@ -143,8 +144,8 @@ export default function App() {
                         <div className="logo-section">
                             <div className="logo-icon">🚗</div>
                             <div className="logo-text">
-                                <h1>智能稅費計算器</h1>
-                                <p>Vehicle Tax Calculator</p>
+                                <h1>智能汽車服務平台</h1>
+                                <p>Smart Vehicle Service Platform</p>
                             </div>
                         </div>
                         <button
@@ -155,103 +156,121 @@ export default function App() {
                             <span>ℹ️</span>
                         </button>
                     </div>
-                    <div className="step-indicator">
-                        <div
-                            className={`step ${step >= 1 ? "active" : ""} ${
-                                formData.vehicleType ? "completed" : ""
-                            }`}
-                        >
-                            <span className="step-number">1</span>
-                            <span className="step-label">選擇車型</span>
+
+                    <Navigation
+                        activeTab={activeTab}
+                        setActiveTab={setActiveTab}
+                    />
+
+                    {activeTab === "tax" && (
+                        <div className="step-indicator">
+                            <div
+                                className={`step ${step >= 1 ? "active" : ""} ${
+                                    formData.vehicleType ? "completed" : ""
+                                }`}
+                            >
+                                <span className="step-number">1</span>
+                                <span className="step-label">選擇車型</span>
+                            </div>
+                            <div className="step-line"></div>
+                            <div
+                                className={`step ${step >= 2 ? "active" : ""} ${
+                                    formData.ccRange !== null ? "completed" : ""
+                                }`}
+                            >
+                                <span className="step-number">2</span>
+                                <span className="step-label">排氣量</span>
+                            </div>
+                            <div className="step-line"></div>
+                            <div
+                                className={`step ${step >= 3 ? "active" : ""} ${
+                                    result ? "completed" : ""
+                                }`}
+                            >
+                                <span className="step-number">3</span>
+                                <span className="step-label">計算結果</span>
+                            </div>
                         </div>
-                        <div className="step-line"></div>
-                        <div
-                            className={`step ${step >= 2 ? "active" : ""} ${
-                                formData.ccRange !== null ? "completed" : ""
-                            }`}
-                        >
-                            <span className="step-number">2</span>
-                            <span className="step-label">排氣量</span>
-                        </div>
-                        <div className="step-line"></div>
-                        <div
-                            className={`step ${step >= 3 ? "active" : ""} ${
-                                result ? "completed" : ""
-                            }`}
-                        >
-                            <span className="step-number">3</span>
-                            <span className="step-label">計算結果</span>
-                        </div>
-                    </div>
+                    )}
                 </header>
 
                 <main className="app-main">
-                    <div className="main-grid">
-                        <div className="form-section">
-                            <VehicleSelector
-                                formData={formData}
-                                setFormData={setFormData}
-                                setStep={setStep}
-                            />
+                    {activeTab === "usedcar" ? (
+                        <UsedCarSearch />
+                    ) : (
+                        <>
+                            <div className="main-grid">
+                                <div className="form-section">
+                                    <VehicleSelector
+                                        formData={formData}
+                                        setFormData={setFormData}
+                                        setStep={setStep}
+                                    />
 
-                            {formData.vehicleType && (
-                                <CalculationForm
-                                    formData={formData}
-                                    setFormData={setFormData}
-                                    setStep={setStep}
-                                />
-                            )}
+                                    {formData.vehicleType && (
+                                        <CalculationForm
+                                            formData={formData}
+                                            setFormData={setFormData}
+                                            setStep={setStep}
+                                        />
+                                    )}
 
-                            {result && (
-                                <div className="action-buttons">
-                                    <button
-                                        className="reset-button"
-                                        onClick={resetForm}
-                                    >
-                                        <span>🔄</span>
-                                        重新計算
-                                    </button>
-                                </div>
-                            )}
-                        </div>
-
-                        <div className="result-section">
-                            {result ? (
-                                <ResultDisplay
-                                    result={result}
-                                    formData={formData}
-                                />
-                            ) : (
-                                <div className="placeholder-card glass-card">
-                                    <div className="placeholder-content">
-                                        <div className="placeholder-icon">
-                                            📊
+                                    {result && (
+                                        <div className="action-buttons">
+                                            <button
+                                                className="reset-button"
+                                                onClick={resetForm}
+                                            >
+                                                <span>🔄</span>
+                                                重新計算
+                                            </button>
                                         </div>
-                                        <h3>開始計算</h3>
-                                        <p>請選擇您的車輛類型與相關資訊</p>
-                                        <p>系統將即時計算您需要繳納的稅費</p>
-                                    </div>
+                                    )}
                                 </div>
-                            )}
-                        </div>
-                    </div>
 
-                    {history.length > 0 && (
-                        <HistoryPanel
-                            history={history}
-                            setHistory={setHistory}
-                            onSelectHistory={(item) => {
-                                setFormData(item.formData);
-                                setResult(item);
-                            }}
-                        />
+                                <div className="result-section">
+                                    {result ? (
+                                        <ResultDisplay
+                                            result={result}
+                                            formData={formData}
+                                        />
+                                    ) : (
+                                        <div className="placeholder-card glass-card">
+                                            <div className="placeholder-content">
+                                                <div className="placeholder-icon">
+                                                    📊
+                                                </div>
+                                                <h3>開始計算</h3>
+                                                <p>
+                                                    請選擇您的車輛類型與相關資訊
+                                                </p>
+                                                <p>
+                                                    系統將即時計算您需要繳納的稅費
+                                                </p>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+
+                            {history.length > 0 && (
+                                <HistoryPanel
+                                    history={history}
+                                    setHistory={setHistory}
+                                    onSelectHistory={(item) => {
+                                        setFormData(item.formData);
+                                        setResult(item);
+                                    }}
+                                />
+                            )}
+                        </>
                     )}
                 </main>
 
                 <footer className="app-footer">
                     <p>
-                        © 2025 智能稅費計算器 |
-                        數據僅供參考，實際金額以政府公告為準
+                        © 2025 智能汽車服務平台 | 數據僅供參考，實際金額以
+                        {activeTab === "tax" ? "政府公告" : "市場行情"}為準
                     </p>
                 </footer>
             </div>
